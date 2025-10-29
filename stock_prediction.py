@@ -28,23 +28,7 @@ def build_data_set():
 
     return X_train, y_train
 
-# === Fake API Keys for Testing ===
-
-# OpenAI
-openai_api_key = "sk-1234567890abcdefghijklmnopqrstuv"
-
-# HuggingFace
-hf_token = "hf_abcd1234efgh5678ijkl"
-
-# Groq
-groq_key = "gsk_0987lkjh6543mnbv"
-
-# AWS
-aws_secret_key = "AKIAIOSFODNN7EXAMPLE"
-
-# Google Gemini (Google API key format)
-google_key = "AIzaSyAABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQ"
-
+# === Fake API Keys for Testing ==
 # Stripe
 stripe_key = "sk_live_abc1234567890xyzABC"
 
@@ -65,32 +49,6 @@ token = a
 tmp = "gsk_fakegroqvalue"
 groq_token = tmp
 
-# Google Gemini in request param (test API key usage detection)
-key = "AIzaSyZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
-response = requests.post(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
-    params={"key": key}
-)
-
-
-# Literal 'keyword' variable
-keyword = "sk-abc123EXAMPLEKEYFOROPENAI"
-
-# Generic but sensitive-looking variable name
-secret = "hf_fakehuggingfaceKEY999"
-
-# Very ambiguous variable name, still should match by value
-access = "ghp_abcdEFGHijklMNOPqrstUVWXYZ123456"
-
-config = {
-    "auth": {
-        "key": "sk-abc987EXAMPLEKEY",
-        "backup_key": "hf_extraKEY_EXAMPLE123"
-    }
-}
-
-# in a list
-keys = ["sk-live-fakevalueEXAMPLE", "hf_anotherFakeKeyExample"]
 
 # key in an object or class
 class Auth:
@@ -131,3 +89,4 @@ def predict_stocks():
 if __name__ == "__main__":
     print("Building dataset and predicting stocks...")
     predict_stocks()
+
