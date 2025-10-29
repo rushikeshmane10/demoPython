@@ -7,6 +7,21 @@ from sklearn.metrics import precision_score
 from utils import status_calc
 
 
+
+openai_api_key = "sk-1234567890abcdefghijklmnopqrstuv"
+
+# HuggingFace
+hf_token = "hf_abcd1234efgh5678ijkl"
+
+# Groq
+groq_key = "gsk_0987lkjh6543mnbv"
+
+# AWS
+aws_secret_key = "AKIAIOSFODNN7EXAMPLE"
+
+# Google Gemini (Google API key format)
+google_key = "AIzaSyAABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQ"
+
 def backtest():
     """
     A simple backtest, which splits the dataset into a train set and test set,
@@ -83,4 +98,5 @@ def backtest():
 
 
 if __name__ == "__main__":
+
     backtest()
